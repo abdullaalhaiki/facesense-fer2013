@@ -22,7 +22,7 @@ CLASSES = [
 
 @st.cache_resource
 def load_resources():
-    model_path = Path(__file__).resolve().parent / "fer2013_cnn.keras"
+    model_path = Path(__file__).resolve().parent / "fer2013_cnn.h5"
     model = tf.keras.models.load_model(model_path, compile=False)
     detector = cv2.CascadeClassifier(
         cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
